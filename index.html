@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story - 2 Years Together</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        .font-script { font-family: 'Dancing Script', cursive; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        
+        .timeline-item {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .timeline-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .timeline-item.left {
+            transform: translateX(-50px);
+        }
+        
+        .timeline-item.right {
+            transform: translateX(50px);
+        }
+        
+        .timeline-item.left.animate {
+            transform: translateX(0);
+        }
+        
+        .timeline-item.right.animate {
+            transform: translateX(0);
+        }
+        
+        .hearts {
+            background: linear-gradient(-45deg, #ff6b6b, #ff8e8e, #ffa8a8, #ffcccc);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .heart {
+            position: absolute;
+            color: rgba(255, 182, 193, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+        }
+        
+        .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .heart:nth-child(3) { left: 30%; animation-delay: 2s; }
+        .heart:nth-child(4) { left: 40%; animation-delay: 3s; }
+        .heart:nth-child(5) { left: 50%; animation-delay: 4s; }
+        .heart:nth-child(6) { left: 60%; animation-delay: 5s; }
+        .heart:nth-child(7) { left: 70%; animation-delay: 1.5s; }
+        .heart:nth-child(8) { left: 80%; animation-delay: 2.5s; }
+        .heart:nth-child(9) { left: 90%; animation-delay: 3.5s; }
+        
+        /* New style for timeline photos */
+        .timeline-photo {
+            width: 100%;
+            height: 12rem; /* Matches h-48 in Tailwind */
+            object-fit: cover;
+            border-radius: 1rem; /* Matches rounded-2xl in Tailwind */
+            margin-bottom: 1.5rem; /* Matches mb-6 in Tailwind */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+        }
+    </style>
+</head>
+<body class="font-inter bg-gradient-to-br from-pink-50 via-white to-rose-50 min-h-screen">
+    <div class="floating-hearts fixed inset-0 z-0">
+        <div class="heart text-2xl">💕</div>
+        <div class="heart text-xl">💖</div>
+        <div class="heart text-3xl">💗</div>
+        <div class="heart text-lg">💕</div>
+        <div class="heart text-2xl">💖</div>
+        <div class="heart text-xl">💗</div>
+        <div class="heart text-2xl">💕</div>
+        <div class="heart text-lg">💖</div>
+        <div class="heart text-3xl">💗</div>
+    </div>
+
+    <header class="relative z-10 text-center py-16 px-4">
+        <div class="hearts rounded-3xl mx-auto max-w-4xl p-12 shadow-2xl">
+            <h1 class="font-script text-6xl md:text-8xl text-white font-bold mb-4 drop-shadow-lg">
+                Our Love Story
+            </h1>
+            <p class="font-script text-3xl md:text-4xl text-white mb-6">
+                [Your Names] ❤️ [Partner's Name]
+            </p>
+            <div class="bg-white/20 backdrop-blur-sm rounded-full px-8 py-4 inline-block">
+                <p class="text-white text-xl md:text-2xl font-semibold">
+                    2 Beautiful Years Together
+                </p>
+                <p class="text-white/90 text-lg">
+                    [Start Date] - [Anniversary Date]
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 py-16">
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-pink-300 via-rose-400 to-pink-500 h-full rounded-full shadow-lg"></div>
+        
+        <div class="timeline-item left mb-16 flex justify-end pr-8 md:pr-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -right-4 top-8 w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/1.jpg" alt="Our first meeting" class="timeline-photo">
+                <h3 class="font-script text-3xl text-pink-600 mb-3">Our First Hi/Hello</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    The day we first met and boy mahiyain pa huwhefuhuwheeehufhwuw
+                </p>
+                <p class="text-sm text-pink-500 font-medium mt-4">09/09/23</p>
+            </div>
+        </div>
+
+        <div class="timeline-item right mb-16 flex justify-start pl-8 md:pl-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -left-4 top-8 w-8 h-8 bg-rose-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/2.jpg" alt="Our first date" class="timeline-photo">
+                <h3 class="font-script text-3xl text-rose-600 mb-3">First Date Magic</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    kain lang sa sm urdaneta date ng malopit i miss u agad
+                </p>
+                <p class="text-sm text-rose-500 font-medium mt-4">12/25/23</p>
+            </div>
+        </div>
+
+        <div class="timeline-item left mb-16 flex justify-end pr-8 md:pr-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -right-4 top-8 w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/3.jpg" alt="Becoming an official couple" class="timeline-photo">
+                <h3 class="font-script text-3xl text-pink-600 mb-3">Minor Basilica of Our Lady of the Rosary of Manaoag</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    1st church with u
+                </p>
+                <p class="text-sm text-pink-500 font-medium mt-4">12/24/23</p>
+            </div>
+        </div>
+
+        <div class="timeline-item right mb-16 flex justify-start pl-8 md:pl-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -left-4 top-8 w-8 h-8 bg-rose-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/4.jpg" alt="A special memory together" class="timeline-photo">
+                <h3 class="font-script text-3xl text-rose-600 mb-3">First sea tgt</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Vitamin sea with u bessywaps
+                </p>
+                <p class="text-sm text-rose-500 font-medium mt-4">10/28/23</p>
+            </div>
+        </div>
+
+        <div class="timeline-item left mb-16 flex justify-end pr-8 md:pr-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -right-4 top-8 w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/5.jpg" alt="Our first anniversary" class="timeline-photo">
+                <h3 class="font-script text-3xl text-pink-600 mb-3">18th birthday</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    18th bday ng princess nicole q so pretty ugh pangit ng gopit q
+                </p>
+                <p class="text-sm text-pink-500 font-medium mt-4">03/23/24</p>
+            </div>
+        </div>
+
+        <div class="timeline-item right mb-16 flex justify-start pl-8 md:pl-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -left-4 top-8 w-8 h-8 bg-rose-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/6.jpg" alt="A favorite moment from year two" class="timeline-photo">
+                <h3 class="font-script text-3xl text-rose-600 mb-3">1st xmas</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    unang xmas natin together
+                </p>
+                <p class="text-sm text-rose-500 font-medium mt-4">12/25/24</p>
+            </div>
+        </div>
+
+        <div class="timeline-item left mb-16 flex justify-end pr-8 md:pr-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -right-4 top-8 w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/7.jpg" alt="Our first anniversary" class="timeline-photo">
+                <h3 class="font-script text-3xl text-pink-600 mb-3">2nd manaog visit</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    church uli with u pang alis ng masasamang anes!
+                </p>
+                <p class="text-sm text-pink-500 font-medium mt-4">12/25/24</p>
+            </div>
+        </div>
+
+        <div class="timeline-item right mb-16 flex justify-start pl-8 md:pl-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -left-4 top-8 w-8 h-8 bg-rose-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/8.jpg" alt="A favorite moment from year two" class="timeline-photo">
+                <h3 class="font-script text-3xl text-rose-600 mb-3">2nd xmas</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    2nd xmas natin together grrgururuggguguugwguw
+                </p>
+                <p class="text-sm text-rose-500 font-medium mt-4">12/25/24</p>
+            </div>
+        </div>
+
+        <div class="timeline-item left mb-16 flex justify-end pr-8 md:pr-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -right-4 top-8 w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/9.jpg" alt="Our first anniversary" class="timeline-photo">
+                <h3 class="font-script text-3xl text-pink-600 mb-3">2nd date</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    date uli with bff so pretty amfee talagah
+                </p>
+                <p class="text-sm text-pink-500 font-medium mt-4">12/25/24</p>
+            </div>
+        </div>
+
+        <div class="timeline-item right mb-16 flex justify-start pl-8 md:pl-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -left-4 top-8 w-8 h-8 bg-rose-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/10.jpg" alt="A favorite moment from year two" class="timeline-photo">
+                <h3 class="font-script text-3xl text-rose-600 mb-3">cabanatuan escape</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    takas pa more lagoat, ps nag away pa kami nyan dahil sa katangahan q
+                </p>
+                <p class="text-sm text-rose-500 font-medium mt-4">hindi na aq sure kung kailan i2</p>
+            </div>
+        </div>
+
+        <div class="timeline-item left mb-16 flex justify-end pr-8 md:pr-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -right-4 top-8 w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/11.jpg" alt="Our first anniversary" class="timeline-photo">
+                <h3 class="font-script text-3xl text-pink-600 mb-3">swimming kami nyan</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    date uli with bff so pretty amfee talagah
+                </p>
+                <p class="text-sm text-pink-500 font-medium mt-4">06/05/24</p>
+            </div>
+        </div>
+
+        <div class="timeline-item right mb-16 flex justify-start pl-8 md:pl-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -left-4 top-8 w-8 h-8 bg-rose-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/12.jpg" alt="A favorite moment from year two" class="timeline-photo">
+                <h3 class="font-script text-3xl text-rose-600 mb-3">graduation mu</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    college girl na siya? shet?
+                </p>
+                <p class="text-sm text-rose-500 font-medium mt-4">idk when</p>
+            </div>
+        </div>
+
+        <div class="timeline-item left mb-16 flex justify-end pr-8 md:pr-16">
+            <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md relative">
+                <div class="absolute -right-4 top-8 w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-lg"></div>
+                <img src="photos/13.jpg" alt="Our first anniversary" class="timeline-photo">
+                <h3 class="font-script text-3xl text-pink-600 mb-3">most recent date</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    napakagandang dilag owyes
+                </p>
+                <p class="text-sm text-pink-500 font-medium mt-4">06/28/25</p>
+            </div>
+        </div>
+
+        <div class="timeline-item center mb-16 flex justify-center">
+            <div class="hearts rounded-3xl shadow-2xl p-10 max-w-lg relative text-center">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-yellow-400 rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                    <span class="text-2xl">🎊</span>
+                </div>
+                <img src="photos/14.jpg" alt="Two years together" class="w-full h-56 rounded-2xl mb-8 object-cover shadow-lg">
+                <h3 class="font-script text-4xl text-white mb-4 font-bold">2 Years & Counting!</h3>
+                <p class="text-white text-lg leading-relaxed mb-6">
+                    Two years of building dreams together
+                </p>
+                <p class="text-white/90 text-xl font-semibold">9/8/25💖</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="relative z-10 text-center py-16 px-4">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-script text-4xl md:text-5xl text-pink-600 mb-6">
+                Here's to Forever
+            </h2>
+            <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                Thank you for two years of love, mahal kita palagi i hope sana mag tulot tuloy pa us. sayo ko lang ibinigay ang 100% ku my labidabs. also im sorry if nag c-change na me ng hindi ko napapansin, promise mag grow me for the better. i love you so much and i hope we can make more memories together. happy anniversary mahal ko!
+            </p>
+            <div class="bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full px-8 py-4 inline-block shadow-lg">
+                <p class="font-semibold text-lg">All my love, always ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all timeline items
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            observer.observe(item);
+        });
+
+        // Add some interactivity - click hearts for fun effect
+        document.addEventListener('click', (e) => {
+            if (Math.random() > 0.7) { // 30% chance
+                createClickHeart(e.clientX, e.clientY);
+            }
+        });
+
+        function createClickHeart(x, y) {
+            const heart = document.createElement('div');
+            heart.innerHTML = '💖';
+            heart.style.position = 'fixed';
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
+            heart.style.fontSize = '24px';
+            heart.style.pointerEvents = 'none';
+            heart.style.zIndex = '1000';
+            heart.style.animation = 'fadeUpOut 2s ease-out forwards';
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                document.body.removeChild(heart);
+            }, 2000);
+        }
+
+        // Add CSS for click tulips
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeUpOut {
+                0% {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateY(-100px) scale(1.5);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
